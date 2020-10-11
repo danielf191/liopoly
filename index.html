@@ -1,0 +1,347 @@
+<!DOCTYPE html>        
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Notable&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <title>Liopoly</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+
+<body>
+    <nav></nav> 
+    <button id="buybuy" class="button buy" onclick=buyProperty()>BUY PROPERTY</button>    
+    <button class="button roll">ROLL</button>
+    <!-- <button class="button trade">TRADE</button> -->
+    <button class="button build">BUILD</button>
+    <button class="button endTurn" onclick=endTurn()>END TURN</button>
+    <img id="monoguy" src="images/monopolyguy.png" alt="404">
+    <img class="com" src="images/comchest.png" alt="">
+    <img class="comLeftView" src="images/comchest.png" alt="">
+    <img class="comRightView" src="images/comchest.png" alt="">
+    <img class="chanceRightView" src="images/chanceimage.png" alt="">
+    <img class="trainLeft" src="images/train.png" alt="doesnt work">
+    <img class="trainRight" src="images/train.png" alt="doesnt work">
+    <table id="gameBoard">
+        <tbody>
+            <tr>
+                <td class="corner _21"><img class="freeParking" height=95px width=95px src="images/freepark.png" alt="doesnt work"></td>
+                <td class="gameSpace _22"><div class="red">&nbsp</div></td>
+                <td class="gameSpace _23"><img class="chanceUpsideDown" height=70% width=70% src="images/chanceimage.png" alt="doesnt work"></td>
+                <td class="gameSpace _24"><div class="red">&nbsp</div></td>
+                <td class="gameSpace _25"><div class="red">&nbsp</div></td>
+                <td class="gameSpace _26"><img class="topTrain" height=50% width=95% src="images/train.png" alt="doesnt work"></td>
+                <td class="gameSpace _27"><div class="yellow">&nbsp</div></td>
+                <td class="gameSpace _28"><div class="yellow">&nbsp</div></td>
+                <td class="gameSpace _29"><img class="works" height= 77% width= 100% src="images/waterworks.png" alt="doesnt work"></td>
+                <td class="gameSpace _30"><div class="yellow">&nbsp</div></td>
+                <td class="corner _31"><img class="police" height=95px width=95px src="images/police.png" alt="doesnt work"></td>
+            </tr>
+            <tr>
+                <td class="border _20"><div class="orange">&nbsp</div></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="border _32"><div class="green">&nbsp</div></td>
+            </tr>
+            <tr>
+                <td class="border _19"><div class="orange">&nbsp</div></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="border _33"><div class="green">&nbsp</div></td>
+            </tr>
+            <tr>
+                <td class="border _18"></td></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="border _34"></td></td>
+            </tr>
+            <tr>
+                <td class="border _17"><div class="orange">&nbsp</div></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="border _35"><div class="green">&nbsp</div></td>
+            </tr>
+            <tr>
+                <td class="border _16"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="border _36"></td>
+            </tr>
+            <tr>
+                <td class="border _15"><div class="pink">&nbsp</div></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="border _37"></td>
+            </tr>
+            <tr>
+                <td class="border _14"><div class="pink">&nbsp</div></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="border _38"><div class="darkblue">&nbsp</div></td>
+            </tr>
+            <tr>
+                <td class="border _13"><img class="eCompany" height=90% width=75% src="images/electricCompany.png" alt="doesnt work"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="border _39"><img class="luxtax" height= 100% width= 60% src="images/luxurytax.png" alt="doesnt work"></td>
+            </tr>
+            <tr>
+                <td class="border _12"><div class="pink">&nbsp</div></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="border _40"><div class="darkblue">&nbsp</div></td>
+            </tr>
+            <tr>
+                <td class="corner _11"><img class="injail" height=97px width=97px src="images/injail.png" alt="doesnt work"></td>
+                <td class="gameSpace _10">
+                    <div class="lightblue">
+                        
+                    </div>   
+                </td>
+                <td class="gameSpace _9"><div class="lightblue">&nbsp</div></td>
+                <td class="gameSpace _8"><img class="chance" height=70% width=70% src="images/chanceimage.png" alt="doesnt work"></td>
+                <td class="gameSpace _7"><div class="lightblue">&nbsp</div></td>
+                <td class="gameSpace _6"><img class="train" height=50% width=95% src="images/train.png" alt="doesnt work"></td>
+                <td class="gameSpace _5"><p class="incomeTax">Income </br> Tax </br> &#x25C8;</p></td>
+                <td class="gameSpace _4"><div class="brown">&nbsp</div></td>
+                <td class="gameSpace _3"></td>
+                <td class="gameSpace _2"><div class="brown">&nbsp</div></td>
+                <td class="corner _1">
+                    <div class="gameSpaceDiv">   
+                        <div class="squareHolder"></div>
+                        <div class="redSquare"></div>
+                        <div class="blueSquare"></div>
+                        <div class="greenSquare"></div>
+                        <div class="yellowSquare"></div>
+                    </div>  
+                    <p class="go">&#8592; GO</br>Collect</br>$200</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p id="turn">It's Player 1's turn!</p>
+    <p id="safeTimerDisplay">Loading...</p>
+    <p id="p1">P1($1500): </p>
+    <p id="p2">P2($1500): </p>
+    <p id="p3">P3($1500): </p>
+    <p id="p4">P4($1500): </p>
+
+    <div id="pop-up">
+        <p>
+            Mediterranean Avenue (<b>Rent: $2</b>)
+       </p>
+    </div>
+    <div id="baltic">
+        <p>
+            Baltic Avenue (<b>Rent: $4</b>)
+       </p>
+    </div>
+    <div id="reading">
+        <p>
+            Reading Railroad (<b>Rent: $4</b>)
+       </p>
+    </div>
+    <div id="oriental">
+        <p>
+            Oriental Avenue (<b>Rent: $6</b>)
+       </p>
+    </div>
+    <div id="vermont">
+        <p>
+            Vermont Avenue (<b>Rent: $6</b>)
+       </p>
+    </div>
+    <div id="con">
+        <p>
+            Connecticut Avenue (<b>Rent: $8</b>)
+       </p>
+    </div>
+    <div id="charles">
+        <p>
+            St. Charles Avenue (<b>Rent: $10</b>)
+       </p>
+    </div>
+    <div id="states">
+        <p>
+            States Avenue (<b>Rent: $10</b>)
+       </p>
+    </div>
+    <div id="virginia">
+        <p>
+            Virginia Avenue (<b>Rent: $12</b>)
+       </p>
+    </div>
+    <div id="pennroad">
+        <p>
+            Pennsylvania Railroad (<b>Rent: $25</b>)
+       </p>
+    </div>
+    <div id="james">
+        <p>
+            St. James Place (<b>Rent: $14</b>)
+       </p>
+    </div>
+    <div id="tennis">
+        <p>
+            Tennessee Avenue (<b>Rent: $14</b>)
+       </p>
+    </div>
+    <div id="york">
+        <p>
+            New York Avenue (<b>Rent: $16</b>)
+       </p>
+    </div>
+    <div id="kfc">
+        <p>
+            Kentucky Avenue (<b>Rent: $18</b>)
+       </p>
+    </div>
+    <div id="indiana">
+        <p>
+            Indiana Avenue (<b>Rent: $18</b>)
+       </p>
+    </div>
+    <div id="ill">
+        <p>
+            Illinois Avenue (<b>Rent: $20</b>)
+       </p>
+    </div>
+    <div id="atl">
+        <p>
+            Atlantic Avenue (<b>Rent: $22</b>)
+       </p>
+    </div>
+    <div id="bo">
+        <p>
+            B. & O. Railroad (<b>Rent: $25</b>)
+       </p>
+    </div>
+    <div id="vent">
+        <p>
+            Ventnor Avenue (<b>Rent: $22</b>)
+       </p>
+    </div>
+    <div id="ww">
+        <p>
+            Water Works (<b>Rent: 4x dice value if one utility is owned, 10x if both are owned</b>)
+       </p>
+    </div>
+    <div id="eComp">
+        <p>
+            Electric Company (<b>Rent: 4x dice value if one utility is owned, 10x if both are owned</b>)
+       </p>
+    </div>
+    <div id="mg">
+        <p>
+            Marvin Gardens (<b>Rent: $24</b>)
+       </p>
+    </div>
+    <div id="pa">
+        <p>
+            Pacific Avenue (<b>Rent: $26</b>)
+       </p>
+    </div>
+    <div id="nc">
+        <p>
+            North Carolina Avenue (<b>Rent: $28</b>)
+       </p>
+    </div>
+    <div id="penna">
+        <p>
+            Pennsylvania Avenue (<b>Rent: $28</b>)
+       </p>
+    </div>
+    <div id="short">
+        <p>
+            Short Line (<b>Rent: $25</b>)
+       </p>
+    </div>
+    <div id="parkp">
+        <p>
+            Park Place (<b>Rent: $35</b>)
+       </p>
+    </div>
+    <div id="bw">
+        <p>
+            Boardwalk (<b>Rent: $35</b>)
+       </p>
+    </div>
+
+    <footer class="footer">Made with <&#47;> by <a target = "_blank" href="https://github.com/22saahask">22saahask</a> and <a target = "_blank" href="https://github.com/danielf191">22danielf</a></footer>
+    
+
+</body>
+<script src="liopoly.js"></script>
+</html>
+
+

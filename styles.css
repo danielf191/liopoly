@@ -1,0 +1,777 @@
+
+body{
+    background-color: rgb(206, 201, 201); 
+    /* font-family: 'Righteous', cursive; */
+    background: linear-gradient(to bottom, #dbd7d1, #e4e1dc 116px) no-repeat;
+    font-family: 'Roboto';
+    background-blend-mode: soft-light;
+    
+}
+
+#monoguy {
+    /*float: middle;*/
+    position: absolute;
+    margin: auto;
+    top: 275px;
+    left: 530px;
+    z-index: 1;
+}
+
+.gameSpace{
+    border: 1px solid black;
+    width: 63px;
+    height: 100px;
+    z-index: 0;
+    position: relative;
+}
+
+.border {
+    border: 1px solid black;
+    width: 100px;
+    height: 63px;
+}
+
+.corner {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+td {
+    padding: 0;
+    margin: none;
+}
+
+#gameBoard {
+    margin: 0px 0px 0px 300px;    
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgba(198, 255, 238, 0.986);
+    border-collapse: collapse;
+    transform: rotate(0deg);
+}
+
+.police {
+    transform: rotate(225deg);
+}
+
+.com {
+    position: absolute;
+    height: 75px;
+    width: 60px;
+    left: 863px;
+    top: 710px;
+    z-index: 1;
+}
+
+.train {
+    position: relative;
+    left: 5%;
+    bottom: -5%;
+}
+
+.trainLeft {
+    transform: rotate(90deg);
+    position: absolute;
+    left: 325px;
+    top: 375px;
+    z-index: 1;
+    height: 49px;
+    width: 63px;
+}
+
+.trainRight {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 1005px;
+    top: 375px;
+    z-index: 1;
+    height: 49px;
+    width: 63px;
+}
+
+.incomeTax {
+    font-size: 80%;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+}
+
+.footer {
+    text-align: center;
+    margin: 40px 0px 0px 0px;
+}
+
+.topTrain {
+    transform: rotate(180deg);
+    position: relative;
+    left: 5%;
+    bottom: -5%;
+}
+
+.freeParking {
+    transform: rotate(135deg);
+    position: relative;
+    left: 10%;
+    bottom: -10%;
+}
+
+.injail {
+    transform: rotate(90deg);
+    position: relative;
+    left: 1%;
+    bottom: -2%;
+}
+
+
+.blank {
+    color: rgb(0, 0, 0);
+    font-size: 200%;
+    /* font-family: 'Notable', sans-serif; */
+    font-family: 'Roboto', 'Righteous', cursive;
+    text-align: center;
+}
+
+
+.brown{
+    background-color: rgb(105, 82, 82);
+    height:24px;
+    position: relative;
+    bottom: 38%;
+}
+
+.lightblue{
+    background-color: rgb(118, 186, 226);
+    height:24px;
+    position: relative;
+    bottom: 38%;
+}
+
+.pink{
+    background-color: rgb(206, 75, 166);
+    height:63px;
+    width: 24px;
+    position: relative;
+    bottom: 0%;
+    left: 76%;
+}
+
+.orange{
+    background-color: rgb(236, 167, 39);
+    height:63px;
+    width: 24px;
+    position: relative;
+    bottom: 0%;
+    left: 76%;
+}
+
+.red{
+    background-color: rgb(232, 107, 85);
+    height:24px;
+    position: relative;
+    bottom: -38%;
+}
+
+.yellow{
+    background-color: rgb(221, 218, 63);
+    height:24px;
+    position: relative;
+    bottom: -38%;
+}
+
+.green{
+    background-color: rgb(34, 195, 96);
+    height:63px;
+    width: 24px;
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+}
+
+.darkblue{
+    background-color: rgb(29, 87, 221);
+    height:63px;
+    width: 24px;
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+}
+
+.chance {
+    position: relative;
+    bottom: 0%;
+    left: 15%;
+}
+
+.chanceUpsideDown {
+    position: relative;
+    bottom: 0%;
+    left: 15%;
+    transform: rotate(180deg);
+}
+
+.chanceRightView {
+    position: absolute;
+    height: 75px;
+    width: 45px;
+    left: 1015px;
+    top: 425px;
+    z-index: 1;
+    transform: rotate(270deg);
+
+}
+
+.comRightView {
+    position: absolute;
+    transform: rotate(90deg);
+    z-index: 1;
+    height: 75px;
+    width: 60px;
+    top: 235px;
+    left: 325px;
+    
+}
+
+.comLeftView {
+    position: absolute;
+    transform: rotate(270deg);
+    z-index: 1;
+    height: 75px;
+    width: 60px;
+    top: 233px;
+    left: 1010px;
+
+}
+
+.eCompany {
+    transform: rotate(90deg);
+    position: relative;
+    top: 1%;
+    left: 9%;
+}
+
+.works {
+    transform: rotate(180deg);
+}
+
+.luxtax {
+    transform: rotate(270deg);
+    position: relative;
+    top: 1%;
+    left: 17%;
+}
+
+.go {
+    text-align: center;
+    color: rgb(199, 40, 40);
+    font-family: 'Righteous', cursive;
+    font-size: 110%;
+}
+
+
+.button {
+    left: 50px;
+    border: 4px;
+    background-color: whitesmoke;
+    color: #787878;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border-radius: 7px;
+    font-size: 110%;
+    font-family: 14.7425px 'Noto Sans';
+    font-weight: 100;
+    height: 50px;
+    width: 200px;
+    float: left;
+    text-shadow: 0px 1px 0px #fff;
+    box-shadow: 0px 2px 2px 0px rgb(196, 191, 191);
+}
+
+.button:hover {
+    box-shadow: 1px 3px 3px 0px rgb(189, 181, 181);
+    background-color: rgb(242, 238, 238);
+}
+
+.button:active {
+    background-color: rgb(225, 155, 27);
+    color: white;
+    text-shadow: none;
+}
+
+.buy {
+    top: 100px;
+}
+
+.roll {
+    top: 210px;
+}
+
+.trade {
+    top: 320px;
+}
+
+.build {
+    /* top: 430px; */
+    top: 320px;
+}
+
+.endTurn {
+    /* top: 540px; */
+    top: 430px;
+}
+
+.endTurn:hover {
+    background-color: red;
+    color: white;
+    text-shadow: none;
+}
+
+.endTurn:active {
+    transform: translateY(2px);
+}
+
+#turn {
+    border-radius: 5px;
+    border: 2px solid black;
+    position: absolute;
+    top: 50px;
+    left: 1250px;
+}
+
+#safeTimerDisplay {
+    border-radius: 5px;
+    border: 2px solid black;
+    position: absolute;
+    top: 100px;
+    left: 1250px;
+}
+
+#p1 {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    /* border: 2px solid black; */
+    border: none;
+    box-shadow: 0px 1px 1px gray;
+    position: absolute;
+    top: 150px;
+    left: 1250px;
+    color: red;
+}
+
+#p1:hover {
+    transform: translateY(-2px);
+}
+#p2:hover {
+    transform: translateY(-2px);
+}
+#p3:hover {
+    transform: translateY(-2px);
+}
+#p4:hover {
+    transform: translateY(-2px);
+}
+
+#p2 {
+    background-color: whitesmoke;
+    border: none;
+    box-shadow: 0px 1px 1px gray;
+    border-radius: 5px;
+    position: absolute;
+    top: 200px;
+    left: 1250px;
+    color: blue;
+}
+
+#p3 {
+    background-color: whitesmoke;
+    border: none;
+    box-shadow: 0px 1px 1px gray;
+    border-radius: 5px;
+    position: absolute;
+    top: 250px;
+    left: 1250px;
+    color: green;
+}
+
+#p4 {
+    background-color: whitesmoke;
+    border: none;
+    box-shadow: 0px 1px 1px gray;
+    border-radius: 5px;
+    position: absolute;
+    top: 300px;
+    left: 1250px;
+    color: rgb(210, 210, 27);
+}
+
+.squareHolder {
+    width: 60px;
+    height: 15px;
+    position: absolute;
+}
+
+.redSquare {
+    background-color: red;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+}
+
+.blueSquare {
+    background-color: blue;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    transform: translate(15px,0px);
+}
+
+.greenSquare {
+    background-color: green;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    transform: translate(30px,0px);
+}
+
+.yellowSquare {
+    background-color: yellow;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    transform: translate(45px,0px);
+}
+
+.gameSpaceDiv {
+    position: absolute; 
+}
+
+div#pop-up {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+}
+
+div#baltic {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 5;
+}
+
+div#reading {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 4;
+}
+
+div#oriental {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 4;
+}
+
+div#vermont {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 4;
+}
+
+div#con {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#charles {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#states {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#virginia {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#pennroad {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#james {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#tennis {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#york {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#kfc {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#indiana {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#ill {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#atl {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#bo {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#vent {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#ww {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+div#eComp {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+div#mg {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+div#pa {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+div#nc {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+div#penna {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+div#short {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+div#parkp {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+div#bw {
+    display: none;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    background: #eeeeee;
+    color: #000000;
+    border: 1px solid #1a1a1a;
+    font-size: 90%;
+    z-index: 9;
+}
+
+
